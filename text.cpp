@@ -84,7 +84,7 @@ class graph {
 					optimize(x.first, cur,prev, e, depth+1, time+x.second, target);
 					visited[x.first] = true;
 				}else{
-					if(farDepth[x.first]<fixed_depth){
+					if(farDepth[x.first]>fixed_depth && depth<fixed_depth){
 						cout<<"z"<<ids[cur][x.first]<<" "<<time<<endl;
 						optNodes.insert(ids[cur][x.first]);
 					}
