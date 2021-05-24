@@ -23,9 +23,9 @@ Step 0+. exit: exits the yosys tool and takes back to terminal.
 Requirements:
 Make sure Yosys is installed. 
 Commands to follow if not installed
-	sudo add-apt-repository ppa:saltmakrell/ppa
-	sudo apt-get update 
-	sudo apt-get install yosys
+	1. sudo add-apt-repository ppa:saltmakrell/ppa
+	2. sudo apt-get update 
+	3. sudo apt-get install yosys
 	
 The Script should work fine for most of the designs in Verilog. Exceptions: Memory models, complex hierarchy, designs with false paths, multi clock designs.
 Run Steps:
@@ -36,13 +36,13 @@ Run Steps:
 
 Area can be changed in the cells.lib file.
 propagation delay of cells can be changed in "text.cpp" with the following statements in main():
-	tpd["NOT"] = <Value>;
-	tpd["NAND"] = <Value>;
-	tpd["NOR"]=<Value>;
+	1. tpd["NOT"] = <Value>;
+	2. tpd["NAND"] = <Value>;
+	3. tpd["NOR"]=<Value>;
 The flop values can be changed in "text.cpp" with the following statements in main():
-	dff[0] =1;//tsetup
-	dff[1] =1;//thold
-	dff[2] =0.1;//c->q
+	1. dff[0] =1;//tsetup
+	2. dff[1] =1;//thold
+	3. dff[2] =0.1;//c->q
 Put the desired values here.
 
 
@@ -52,5 +52,6 @@ Some Screenshots:
   <img width="503" alt="Expected" src="https://user-images.githubusercontent.com/39923808/119357511-48269780-bcc5-11eb-9803-254c2e25f777.PNG">
   
   
-<img width="515" alt="Capture" src="https://user-images.githubusercontent.com/39923808/119357768-9176e700-bcc5-11eb-9e02-a55c146547bb.PNG">
+<img width="367" alt="Capture" src="https://user-images.githubusercontent.com/39923808/119363966-0b11d380-bccc-11eb-9912-97b8b1a3f16d.PNG">
+
 
